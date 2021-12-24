@@ -1,19 +1,32 @@
 #include <iostream>
 
 // Coin values array should be sorted
-int coinSums(int sum, int coinValues[] )
+// https://projecteuler.net/problem=31
+
+int combinations[1000] = {0};
+int coinSums(int amount, int coins[], int num_of_coins)
 {
-    int arraySize = sum;
-    int count;
-    int amountsArr[arraySize];
-    
-    for (int i = 0; i < sizeof(coinValues); i++)
+    combinations[0] = 1;
+    for (int i = 0; i < num_of_coins; i++)
     {
-        int division = sum / coinValues[i];
+        for (int j = 1; j < 500; j++)
+        {
+            if (j >= coins[i])
+            {
+                combinations[j] += combinations[j - coins[i]];
+
+            }
+        }
     }
+
+    return combinations[amount];
 }
 
 int main() {
-    std::cout << "Hello World!";
+
+    // Coin sums driver code
+    int coins[8] = { 1, 2, 5, 10, 20, 50, 100, 200};
+    std::cout << coinSums(200, coins, 8) << std::endl;
+
     return 0;
 }
