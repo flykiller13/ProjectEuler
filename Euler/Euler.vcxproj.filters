@@ -27,12 +27,18 @@
     <ClCompile Include="PrimeDigitsReplacements.cpp">
       <Filter>Source Files\Problems</Filter>
     </ClCompile>
+    <ClCompile Include="SelfPowers.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoinSums.h">
       <Filter>Source Files\Problems</Filter>
     </ClInclude>
     <ClInclude Include="PrimeDigitsReplacements.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfPowers.h">
       <Filter>Source Files\Problems</Filter>
     </ClInclude>
   </ItemGroup>

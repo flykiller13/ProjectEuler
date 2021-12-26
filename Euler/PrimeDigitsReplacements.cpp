@@ -26,6 +26,7 @@ bool isPrime(int a)
 int replacements(int arr [], int length)
 {
 	int counter = 0;
+	
 	for (int i = 0; i < 10; i++)
 	{
 		for (int j = 0; j < length; j++)

@@ -30,5 +30,4 @@ int coinSums(int amount, int coins[], int num_of_coins)
 }
 
 // Coin sums driver code
-int coins[8] = { 1, 2, 5, 10, 20, 50, 100, 200 };
-std::cout << coinSums(200, coins, 8) << std::endl;
+// int coins[8] = { 1, 2, 5, 10, 20, 50, 100, 200 };

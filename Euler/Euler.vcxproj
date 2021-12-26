@@ -142,9 +142,11 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="CoinSums.cpp" />
     <ClCompile Include="PrimeDigitsReplacements.cpp" />
+    <ClCompile Include="SelfPowers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoinSums.h" />
+    <ClInclude Include="SelfPowers.h" />
     <ClInclude Include="PrimeDigitsReplacements.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
