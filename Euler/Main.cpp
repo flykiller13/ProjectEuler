@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-    cout << selfPowers(3);
-
+    cout << "Answer is: " << selfPowers(1000);
+    //cout << modp(5,3, 4);
     return 0;
 }
