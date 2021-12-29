@@ -1,5 +1,5 @@
 #pragma once
 
-long selfPowers(int a);
+long long selfPowers(long long a);
 
-int modp(int a, int b, int mod);
+long long modp(long long a, long long b, long long mod);

@@ -30,6 +30,18 @@
     <ClCompile Include="SelfPowers.cpp">
       <Filter>Source Files\Problems</Filter>
     </ClCompile>
+    <ClCompile Include="001.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="002.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="009.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="015.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoinSums.h">
@@ -39,6 +51,18 @@
       <Filter>Source Files\Problems</Filter>
     </ClInclude>
     <ClInclude Include="SelfPowers.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="001.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="002.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="009.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="015.h">
       <Filter>Source Files\Problems</Filter>
     </ClInclude>
   </ItemGroup>

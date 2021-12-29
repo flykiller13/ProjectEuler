@@ -5,7 +5,8 @@
 
 using namespace std;
 
-int modp(int a, int b, int mod)
+// Modular exponentiation - doesn't work for large numbers...
+long long modp(long long a, long long b, long long mod)
 {
 	if (a == 0)
 	{
@@ -17,33 +18,46 @@ int modp(int a, int b, int mod)
 		return 1;
 	}
 
-	long res = 1;
+	long long res = 0;
+	
 
 	if (b % 2 == 0)
 	{
-		int temp = modp(a, b / 2, mod);
-		res = (temp * temp) % mod;
+		long long temp = modp(a, b / 2, mod);
+		res = (temp * temp);
+		res = res % mod;
 	}
 	else
 	{
-		int temp = modp(a, b-1, mod);
+		long long temp = modp(a, b-1, mod);
 		res = (a * temp) % mod;
 	}
 
-	cout << (int)res << endl;
-	return (int)(res + mod) % mod;
+	//cout << "Checking: " << a << "^" << b << endl;
+	return res < 0 ? (res + mod) % mod : res;
 }
 
-long selfPowers(int a)
+long long modulo = 10000000000LL;
+
+long long selfPowers(long long a)
 {
-	long sum = 0;
-	for (int i = 1; i <= a; i++)
+	unsigned long long res = 0ULL, temp;
+	int pow;
+
+	for (int i = 1; i < a; i++)
 	{
-		sum += modp(i,i, 10000000000);
-		cout << sum << endl;
+		pow = 1;
+		temp = 1;
+		while (pow <= i)
+		{
+			temp = (temp * i) % modulo;
+			pow++;
+		}
+
+		res = (res + temp) % modulo;
 	}
 
-	return sum;
+	return res;
 
 }
 
