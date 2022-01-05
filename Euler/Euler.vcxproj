@@ -143,6 +143,9 @@
     <ClCompile Include="002.cpp" />
     <ClCompile Include="009.cpp" />
     <ClCompile Include="015.cpp" />
+    <ClCompile Include="016.cpp" />
+    <ClCompile Include="059.cpp" />
+    <ClCompile Include="069.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="CoinSums.cpp" />
     <ClCompile Include="PrimeDigitsReplacements.cpp" />
@@ -153,6 +156,9 @@
     <ClInclude Include="002.h" />
     <ClInclude Include="009.h" />
     <ClInclude Include="015.h" />
+    <ClInclude Include="016.h" />
+    <ClInclude Include="059.h" />
+    <ClInclude Include="069.h" />
     <ClInclude Include="CoinSums.h" />
     <ClInclude Include="SelfPowers.h" />
     <ClInclude Include="PrimeDigitsReplacements.h" />

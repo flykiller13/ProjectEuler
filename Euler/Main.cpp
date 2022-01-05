@@ -1,13 +1,12 @@
 #include <iostream>
 #include "SelfPowers.h"
-#include "015.h"
+#include "069.h"
 
 using namespace std;
 
 int main() {
 
-    // cout << "Answer is: " << selfPowers(1000LL);
-    cout << "Answer: " << lattice(20) << endl;
-
+    cout << "Answer: " << solve(1000000) << endl;
+   
     return 0;
 }
