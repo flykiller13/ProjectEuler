@@ -12,35 +12,55 @@
 
 using namespace std;
 
-bool is_prime(int n)
+bool* get_primes(int n, bool* arr)
 {
-	if (n == 2)
+	// Init array
+	for (int i = 0; i <= n; i++)
 	{
-		return true;
+		arr[i] = true;
 	}
 
+	// "Gray out" multiples of primes
+	int c = 0;
 	for (int i = 2; i < sqrt(n); i++)
 	{
-		if (n % i == 0)
+		if (arr[i])
 		{
-			return false;
+			c = 0;
+			for (int j = i * i; j <= n; j = i*i + c * i)
+			{
+				arr[j] = false;
+				c++;
+			}
 		}
 	}
 
-	return true;
+	// Return array where prime indexes are true
+	return arr;
 }
 
-int prime_power(int n)
+int * prime_factorize(int n, int * arr, bool * primes)
 {
-	for (int i = 2; i * i<= n; i++)
+
+	for (int j = 0; j < n; j++)
 	{
-		if (is_prime((int)pow(n, i)))
-		{
-			return i;
-		}
+		arr[j] = 0;
 	}
 
-	return 0;
+	int i = 2;
+
+	while (n > 1 && i <= n)
+	{
+		while (n % i == 0)
+		{
+			arr[i]++;
+			n = n / i;
+		}
+
+		i++;
+	}
+
+	return arr;
 }
 
 int euclid_gcd(int a, int b)
@@ -58,32 +78,28 @@ bool relative_prime(int a, int b)
 	return euclid_gcd(a, b) == 1;
 }
 
-int phi(int n)
+int phi(int n, bool * primes, int * totients)
 {
-	int counter = 0;
-	if (is_prime(n))
+	int counter = 1;
+	int* res = new int[n+1];
+	prime_factorize(n, res, primes);
+	
+	// Go over primes that we got from factorization
+	for (int i = 2; i < n; i++)
 	{
-		return n - 1;
-	}
-
-	int power = prime_power(n);
-	if (power > 0)
-	{
-		return (int)(pow(n, power) - pow(n, power - 1));
-	}
-
-	for (int i = 1; i <= n; i++)
-	{
-		if (relative_prime(i, n))
+		if (res[i] >= 1)
 		{
-			// cout << "Relative prime: " << i << endl;
-			counter++;
+			counter *= (int)(pow(i, res[i]) - pow(i, res[i] - 1));
+			//cout << "Prime: " << i << endl;
+			//cout << "Counter: " << n << endl;
 		}
 	}
 
-	// cout << "Total Relative primes: " << counter << endl;
-
-	return counter==0 ? -1 : counter;
+	delete[](res);
+	int relative_primes = counter == 1 ? n - 1 : counter;
+	totients[n] = counter;
+	//cout << "Relative primes for: " << n << " = " << relative_primes << endl;
+	return relative_primes;
 }
 
 double solve(int n)
@@ -91,9 +107,16 @@ double solve(int n)
 	double maxIndex = 0;
 	double maxRes = 0;
 	double res = 0;
+
+	bool* primes = new bool[n + 1];
+	get_primes(n, primes);
+	
+	int* totients = new int[n + 1];
+
 	for (int i = 2; i < n; i++)
 	{
-		double res = (double)i / (double)phi(i);
+		double phi_result = (double)phi(i, primes, totients);
+		double res = (double)i / phi_result;
 		//cout << "Checking: " << i << endl;
 
 		//cout << "Res: " << res << endl;
@@ -105,6 +128,86 @@ double solve(int n)
 			maxIndex = i;
 		}
 	}
+
+	
+
+
+	delete[](totients);
+
+	return maxIndex;
+}
+
+// Solved using dynamic programming
+int solve_dynamic(int n)
+{
+	int* arr = new int[n + 1];
+	arr[1] = 1;
+
+	bool* primes = new bool[n + 1];
+	get_primes(n, primes);
+
+	for (int i = 2; i <= n; i++)
+	{
+		if (primes[i])
+		{
+			arr[i] = i - 1;
+		}
+		else
+		{
+			int temp = i;
+			int j = 2;
+			int counter = 0;
+
+			while (j*j <= temp)
+			{
+				if (temp % j == 0)
+				{
+					while (temp % j == 0)
+					{
+						temp = temp / j;
+						counter++;
+					}
+					if (temp == 1)
+					{
+						arr[i] = (int)(pow(j, counter) - pow(j, counter - 1));
+					}
+					else
+					{
+						arr[i] = arr[(int)pow(j, counter)] * arr[temp];
+					}
+
+					break;
+					
+				}
+
+				j++;
+			}
+
+		}
+	}
+
+	double maxIndex = 0;
+	double maxRes = 0;
+	double res = 0;
+
+	for (int i = 2; i < n; i++)
+	{
+		double phi_result = (double)arr[i];
+		double res = (double)i / phi_result;
+		//cout << "Checking: " << i << endl;
+
+		//cout << "Res: " << res << endl;
+		if (res > maxRes)
+		{
+			cout << "Changing: " << i << endl;
+
+			maxRes = res;
+			maxIndex = i;
+		}
+	}
+
+	delete[](primes);
+	delete[](arr);
 
 	return maxIndex;
 }

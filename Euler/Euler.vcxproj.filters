@@ -51,6 +51,48 @@
     <ClCompile Include="069.cpp">
       <Filter>Source Files\Problems</Filter>
     </ClCompile>
+    <ClCompile Include="003.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="004.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="007.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="008.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="010.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="006.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="014.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="745.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="045.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="053.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="028.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="041.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="058.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="100.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoinSums.h">
@@ -81,6 +123,48 @@
       <Filter>Source Files\Problems</Filter>
     </ClInclude>
     <ClInclude Include="069.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="003.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="004.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="007.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="008.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="010.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="006.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="014.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="745.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="045.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="053.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="028.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="041.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="058.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="100.h">
       <Filter>Source Files\Problems</Filter>
     </ClInclude>
   </ItemGroup>

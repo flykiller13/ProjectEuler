@@ -1,12 +1,10 @@
 #include <iostream>
-#include "SelfPowers.h"
-#include "069.h"
+#include "100.h"
 
 using namespace std;
 
 int main() {
-
-    cout << "Answer: " << solve(1000000) << endl;
-   
+    
+    cout << "Answer: " << arranged_probability() << endl;
     return 0;
 }
