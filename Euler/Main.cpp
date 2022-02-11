@@ -1,10 +1,10 @@
 #include <iostream>
-#include "100.h"
+#include "102.h"
 
 using namespace std;
 
 int main() {
     
-    cout << "Answer: " << arranged_probability() << endl;
+    cout << "Answer: " << triangles() << endl;
     return 0;
 }

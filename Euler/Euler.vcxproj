@@ -159,6 +159,7 @@
     <ClCompile Include="059.cpp" />
     <ClCompile Include="069.cpp" />
     <ClCompile Include="100.cpp" />
+    <ClCompile Include="102.cpp" />
     <ClCompile Include="745.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="CoinSums.cpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="059.h" />
     <ClInclude Include="069.h" />
     <ClInclude Include="100.h" />
+    <ClInclude Include="102.h" />
     <ClInclude Include="745.h" />
     <ClInclude Include="CoinSums.h" />
     <ClInclude Include="SelfPowers.h" />

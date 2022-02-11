@@ -93,6 +93,9 @@
     <ClCompile Include="100.cpp">
       <Filter>Source Files\Problems</Filter>
     </ClCompile>
+    <ClCompile Include="102.cpp">
+      <Filter>Source Files\Problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoinSums.h">
@@ -165,6 +168,9 @@
       <Filter>Source Files\Problems</Filter>
     </ClInclude>
     <ClInclude Include="100.h">
+      <Filter>Source Files\Problems</Filter>
+    </ClInclude>
+    <ClInclude Include="102.h">
       <Filter>Source Files\Problems</Filter>
     </ClInclude>
   </ItemGroup>

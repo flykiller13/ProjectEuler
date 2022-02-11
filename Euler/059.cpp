@@ -84,6 +84,7 @@ long long solve(string p)
 			cout << s << endl;
 			char key = arr[i % 3];
 
+			// ^ is bitwise XOR
 			if (s.length() == 2)
 			{
 				encrypted[i] = stoi(s) ^ key;

@@ -63,22 +63,32 @@ long long arranged_probability()
 long long arranged_probability_2()
 {
 
-	int size = pow(10, 7);
+	long long size = sqrt(pow(10, 12));
 	long long* roots = new long long[size];
 	get_roots(roots, size);
 
-	for (int i = 2; i < size; i++)
+	for (long long i = 2; i < size; i++)
 	{
-		if((roots[i]-1) % 8 == 0)
+		if((i+8) % 16 == 0)
 		{
-			long long red = (roots[i] - 1) / 8;
+			/*long long red = (roots[i] - 1) / 8;
 			long long total = (4 * red + 1 + i) / 2;
 			cout << "======" << endl;
 			cout << "Total: " << total << endl;
 			cout << "Red: " << red << endl;
 			cout << "Red: " << total - red << endl;
-			
+			*/
 			//long long root = sqrt((roots[i] - 1) / 8);
+
+			long long blue = (i + 8) / 16;
+			long long blue_root = (roots[i] - 32) / 32;
+			
+			long long total = (1 + sqrt(blue_root)) / 2;
+			cout << "======" << endl;
+			cout << "Blue: " << blue << endl;
+			cout << "Blue Root: " << blue_root << endl;
+			cout << "Total: " << total << endl;           
+			cout << "======" << endl;
 			
 		}
 
